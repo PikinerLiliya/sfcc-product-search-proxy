@@ -15,6 +15,21 @@ module.exports = {
       site_id: joi.string().trim().required(),
       search_text: joi.string().trim().required(),
       catalog_id: joi.string().trim().optional(),
+      category_id: joi.string().trim().optional(),
+      type: {
+        _type: joi.string().trim().optional(),
+        item: joi.boolean().optional(),
+        set: joi.boolean().optional(),
+        bundle: joi.boolean().optional(),
+        master: joi.boolean().optional(),
+        part_of_product_set: joi.boolean().optional(),
+        bundled: joi.boolean().optional(),
+        variant: joi.boolean().optional(),
+        variation_group: joi.boolean().optional(),
+        option: joi.boolean().optional(),
+        retail_set: joi.boolean().optional(),
+        part_of_retail_set: joi.boolean().optional()
+    },
       page: joi.number().integer().required()
     }
   },
@@ -23,6 +38,11 @@ module.exports = {
     query: {
       ids: joi.array().items(joi.string()).required(),
       site_id: joi.string().trim().required()
+    }
+  },
+  categories: {
+    headers,
+    query: {
     }
   }
 }

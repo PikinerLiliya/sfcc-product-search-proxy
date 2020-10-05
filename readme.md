@@ -51,6 +51,8 @@ Similar to Watch, however allows debugger to be attached to the app.
 | search_text | String | Required | text based search parameter |
 | endpoint    | String | Required | SFCC server url |
 | catalog_id  | String | Optional | Filters products through a specified catalog |
+| category_id  | String | Optional | Filters products through a specified category |
+| type  | Object | Optional | Filters products through a special filters |
 | page        | Int    | Required | Item return page |
 
 request example;
